@@ -1,0 +1,14 @@
+{
+  "name": "Draft",
+  "route": "draft",
+  "authLevel": "none",
+  "properties": {
+    "name": {
+      "type": "String"
+    },
+    "stations": {
+      "type": "[Station]",
+      "propertyMatch": "drafts"
+    }
+  }
+}

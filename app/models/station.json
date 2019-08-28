@@ -1,0 +1,43 @@
+{
+  "name": "Station",
+  "route": "station",
+  "properties": {
+    "name": {
+      "type": "String",
+      "required": true,
+      "actions": {
+        "add": true,
+        "update": true
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "required": true,
+      "actions": {
+        "add": true,
+        "update": true
+      }
+    },
+    "year": {
+      "type": "Number",
+      "required": true,
+      "validate": "isYear",
+      "actions": {
+        "add": true,
+        "update": true
+      }
+    },
+    "yearEnd": {
+      "type": "Number",
+      "validate": "isYear",
+      "actions": {
+        "add": true,
+        "update": true
+      }
+    },
+    "draft": {
+      "type": "Draft",
+      "required": true
+    }
+  }
+}
