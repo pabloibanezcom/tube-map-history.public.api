@@ -1,0 +1,40 @@
+{
+  "name": "Line",
+  "route": "line",
+  "properties": {
+    "order": {
+      "type": "Number"
+    },
+    "key": {
+      "type": "String"
+    },
+    "name": {
+      "type": "String"
+    },
+    "shortName": {
+      "type": "String"
+    },
+    "colour": {
+      "type": "String"
+    },
+    "fontColour": {
+      "type": "String"
+    },
+    "year": {
+      "type": "Number"
+    },
+    "distance": {
+      "type": "Number"
+    },
+    "stationsAmount": {
+      "type": "Number"
+    },
+    "connections": {
+      "type": "[Connection]",
+      "propertyMatch": "line"
+    },
+    "draft": {
+      "type": "Draft"
+    }
+  }
+}
