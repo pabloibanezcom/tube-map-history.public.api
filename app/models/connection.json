@@ -1,0 +1,26 @@
+{
+  "name": "Connection",
+  "route": "connection",
+  "properties": {
+    "year": {
+      "type": "Number"
+    },
+    "yearEnd": {
+      "type": "Number"
+    },
+    "distance": {
+      "type": "Number"
+    },
+    "line": {
+      "type": "Line",
+      "propertyMatch": "connections"
+    },
+    "stations": {
+      "type": "[Station]",
+      "propertyMatch": "connections"
+    },
+    "draft": {
+      "type": "Draft"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Town",
+  "route": "town",
+  "authLevel": "none",
+  "properties": {
+    "name": {
+      "type": "String"
+    },
+    "url": {
+      "type": "String"
+    },
+    "drafts": {
+      "type": "[Draft]",
+      "propertyMatch": "town"
+    }
+  }
+}

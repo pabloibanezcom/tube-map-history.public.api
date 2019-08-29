@@ -6,8 +6,19 @@
     "name": {
       "type": "String"
     },
+    "isPublished": {
+      "type": "Boolean"
+    },
     "stations": {
       "type": "[Station]",
+      "propertyMatch": "drafts"
+    },
+    "town": {
+      "type": "Town",
+      "propertyMatch": "drafts"
+    },
+    "managers": {
+      "type": "[User]",
       "propertyMatch": "drafts"
     }
   }
