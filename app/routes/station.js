@@ -4,11 +4,11 @@ const log500 = require('../util/log500');
 module.exports = (app, modelsService, passport) => {
 
   const registerGetDraftStationsByYearRangeAuth = () => {
-    const url = '/api/:draftId/private/station/year/:yearTo/:yearFrom';
+    const url = '/api/:draftId/private/stations';
     app.get(url,
       passport.authenticate('local-user-with-drafts', { session: false }),
       (req, res) => {
-        service.getDraftStationsByYearRangeAuth(modelsService, req.user, req.params.draftId, req.params.yearTo, req.params.yearFrom)
+        service.getDraftStationsByYearRangeAuth(modelsService, req.user, req.params.draftId)
           .then(result => res.status(result.statusCode).send(result.data))
           .catch(err => { log500(err); res.status(500).send(err) });
       });
@@ -16,10 +16,10 @@ module.exports = (app, modelsService, passport) => {
   }
 
   const registerGetDraftStationsByYearRangePublic = () => {
-    const url = '/api/:draftId/station/year/:yearTo/:yearFrom';
+    const url = '/api/:draftId/stations';
     app.get(url,
       (req, res) => {
-        service.getDraftStationsByYearRangePublic(modelsService, req.params.draftId, req.params.yearTo, req.params.yearFrom)
+        service.getDraftStationsByYearRangePublic(modelsService, req.params.draftId)
           .then(result => res.status(result.statusCode).send(result.data))
           .catch(err => { log500(err); res.status(500).send(err) });
       });

@@ -9,6 +9,25 @@
     "url": {
       "type": "String"
     },
+    "center": {
+      "type": "Point"
+    },
+    "zoom": {
+      "type": "Number"
+    },
+    "year": {
+      "type": "Number"
+    },
+    "alias": {
+      "type": "String"
+    },
+    "imgCard": {
+      "type": "String"
+    },
+    "country": {
+      "type": "Country",
+      "propertyMatch": "towns"
+    },
     "drafts": {
       "type": "[Draft]",
       "propertyMatch": "town"
